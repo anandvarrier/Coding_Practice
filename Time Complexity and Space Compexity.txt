@@ -1,0 +1,71 @@
+What is Time Complexity?
+It is the calculation of the amount of time taken to execute an algorithm. It will not look at an algorithm's overall execution time. Rather, it will provide data on the variation in the execution time when the number of operations in an algorithm increase or decreases.
+
+There are 3 most common asymptotic notations for calculation of Time complexity:
+
+1) O notation - It calculates the worst-case time complexity or the maximum time an algorithm will take to complete execution aka Big O.
+
+2) Ω notation - It calculates the best-case time complexity or the shortest time an algorithm will take to complete execution.
+
+3) θ notation - It calulates both the maximum and the minimum running time.
+
+
+What is Space Complexity?
+Space complexity quantifies how much space or memory it takes to run as a function of the length of the input while as algorithm's time complexity measures how long it takes an algorithm to run as a function of length of the input.
+
+Types of Time Complexity:
+
+1> O(1): When an algorithms's execution time is not based on the input size n, it is said to have constant time complexity with order O(1). Whatever, be the input size n, the runtime doesn't change. This is the most efficient Big O.
+
+2> O(n): When the running time of an algorithm increases linearly with the length of the input, it is assumed to have a linear time complexity. Example: if there are more than 1 for loop which are not nested the Time complexity remains O(n) and not O(2n) or O(10n) where 2 and 10 are number of for loops. In such cases we drop the constants and keep only O(n). This is an efficinent time complexity.
+
+In an example where there is more than 1 input: here a and b
+def print_item(a,b):
+    for i in range(a):
+        print(i)
+    for j in range(b):
+        print(j)
+
+The Time complexity will be O(n) for 1st for loop and O(n) for 2nd for loop. Which is O(2n) i.e O(a + b). This is the most simplistic we can make in such cases. 
+
+3> O(n^2): When the running time of an algorithm increases non-linearly with the length of the input, it is assumed to have a non-linear time complexity.In general, nested loops fall into the O(n)*O(n)=O(n^2) time complexity. Less efficient than O(n). Example: when there is 1 nested for loop and 1 normal for loop ideally the time complexity becomes O(n^2) + O(n) = O(n^2 + n). However, the n here is non-significant. In such cases, we drop n and only write O(n^2) as the time complexity.
+
+In an example where there is more than 1 input: here a and b
+def print_item(a,b):
+    for i in range(a):
+        for j in range(b):
+            print(i,j)
+
+The time complexity will be O(n^2). Here, it will be O(a*b).
+
+4> O(log n): When an algorithm decreases the magnitude of the input data in each step, it is said to have a logarithmic time complexity. This means that the number of operations is not proportionate to the size of input. This is second most efficient Big O.
+
+5> O(nlog n): Popularly known as linearithimic time complexity. Performs slightly slower as compared to linear time complexity but is still significantly better than the quadratic algorithm. 
+Note: Merge sort algorithm has time complexity O(nlogn). Merge sort has complexity of (nlogn) in all circumstances(worst, average, best). also remember this, when it comes to sorting algorithms, O(n*logn) is probably the best time complexity to achieve.
+
+Big O Complexity:
+O(1) -> Excellent
+O(log n) -> Good
+O(n) -> Fair
+O(nlog n) -> Bad
+O(n^2) | O(n!) | O(2^n) -> Horrible
+We have addded few other time compexities. Usually we dont deal with them. 
+
+FEW TERMS TO ASSOCIATE WITH:
+O(1) -> Constant
+O(log n) OR O(nlog n) -> Divide and Conquer
+O(n) -> Proportional
+O(n^2) -> Loop within the loop
+
+
+
+6) Big O of Lists:
+Say for example there is a list of 4 numbers. If I want to append or pop out anything from the end of the list the Time complexity is O(1)
+However, if we want to append or pop anything from the start or at any specific position within the list the time complexity becomes O(n) because when we append or pop from the start or in between the index position changes for the remaining part of the list. 
+In case we have to search for an item in the list by value the Time complexity is O(n). However, when we search for an item in by index position Time complexity is O(1).
+
+6> O(2^N): 
+
+old: my@Hd002Fcpword
+new: HdfC@99pwsd20
+
