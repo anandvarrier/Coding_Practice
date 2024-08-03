@@ -5,13 +5,10 @@ students = {}
 
 # Add Student function
 def addStudent(rno, nm, m):
-    student = {'RollNumber': rno,
-               'Name': nm,
-               'Marks': m}
-    students = dict(student)
+    students[rno]: {"Name": nm, "Marks": m}
     return students
 
-# Search Student
+# Search Student function
 def searchStudent(rollno):
     for i in range(len(students)):
         if students[i]['RollNumber'] == rollno:
