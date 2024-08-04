@@ -5,7 +5,9 @@ students = {}
 
 # Add Student function
 def addStudent(rno, nm, m):
-    students[rno]: {"Name": nm, "Marks": m}
+    students = {'Rollno': rno,
+                'Details': {'Name': nm,
+                            'Marks': m}}
     return students
 
 # Search Student function
