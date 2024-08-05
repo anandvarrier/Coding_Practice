@@ -14,6 +14,6 @@ def addStudent(rno, nm, m):
 def searchStudent(rollno):
     for i in range(len(students)):
         if students[i]['RollNumber'] == rollno:
-            print('Hi')
+            print()
 
 
